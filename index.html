@@ -13,6 +13,13 @@
         document.documentElement.classList.add('js');
     </script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("T9Vrzv3ng8daX5yxe");
+    })();
+</script>
+
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
@@ -590,19 +597,36 @@
                 </div>
             </div>
 
-            <div class="row row-x-center text-center s-contact__content">
-                <div class="column lg-12">
-                    <p class="lead">
-                    Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
-                    quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Quasi sed at voluptas corrupti eius distinctio.
-                    </p>
-                    <div class="btn-wrap">
-                        <a href="#0" class="btn btn--primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,6v0.511 l-8,6.223L4,6.512V6H20z M4,18V9.044l7.386,5.745C11.566,14.93,11.783,15,12,15s0.434-0.07,0.614-0.211L20,9.044L20.002,18H4z"></path></svg>
-                            Write An Email
-                        </a>
+            <div class="column lg-6 tab-12" style="margin: auto; width: 50%;">
+                <form>
+                    <div>
+                        <label for="sampleInput">Your Name</label>
+                        <input class="u-fullwidth" type="text" placeholder="Enter Your Name" id="edt_name" required>
                     </div>
-                </div>
+                    <div>
+                        <label for="sampleInput">Your email</label>
+                        <input class="u-fullwidth" type="email" placeholder="Enter Your Email" id="edt_email" required>
+                    </div>
+                    <div>
+                        <label for="sampleRecipientInput">I'm Interested in</label>
+                        <div class="ss-custom-select">
+                            <select class="u-fullwidth" id="projectType" required>
+                                <option value="Web Dev">Web Development</option>
+                                <option value="App Dev">App Development</option>
+                                <option value="Branding/Graphic Design">Branding/Graphic Design</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="S.E.O">S.E.O</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <label for="exampleMessage">Message</label>
+                    <textarea class="u-fullwidth" placeholder="Your message" id="edt_message" required></textarea>
+                    <input class="btn--primary u-fullwidth" onclick="sendMail()" type="submit" value="Submit">
+                </form>
+
+            
+
             </div>
 
             <footer class="s-footer">
@@ -641,7 +665,7 @@
 
                 <div class="row s-footer__bottom">
                     <div class="column ss-copyright">
-                        <span>© Copyright Techtronic Labs 2023</span> 
+                        <span>© Copyright Techtronic Labs <script>document.write(new Date().getFullYear())</script></span> 
                         <span>Design by <a href="#">TechtrocnicLabs</a></span>
                     </div>
 
@@ -706,6 +730,6 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/contact.js"></script>
 </body>
 </html>
