@@ -102,10 +102,10 @@
 
     /* theme color variations
      */
-    --color-1-lighter              : hsl(174, 65%, 60%);
-    --color-1-light                : hsla(174, 65%, 50%, 1);
-    --color-1-dark                 : hsla(174, 65%, 35%, 1);
-    --color-1-darker               : hsla(174, 65%, 20%, 1);
+    --color-1-lighter              : hsl(212, 100%, 82%);
+    --color-1-light                : hsl(212, 100%, 76%);
+    --color-1-dark                 : hsl(167, 76%, 38%);
+    --color-1-darker               : hsl(167, 81%, 29%);
     --color-2-lighter              : hsla(48, 67%, 99%, 1);
     --color-2-light                : hsla(48, 67%, 89%, 1);
     --color-2-dark                 : hsla(48, 67%, 69%, 1);
@@ -1247,6 +1247,7 @@ textarea {
 
 .u-fullwidth {
     width : 100%;
+    margin-top: -2.5rem;
 }
 
 .u-pull-left {
@@ -1938,7 +1939,7 @@ select {
 }
 
 textarea {
-    min-height : calc(8 * var(--space));
+    min-height : calc(4 * var(--space));
 }
 
 input[type="email"]:focus,
@@ -2979,11 +2980,17 @@ img.u-pull-left {
 .s-header__social svg {
     height : 2.4rem;
     width  : 2.4rem;
+    transition: padding-bottom 0.2s;
+}
+
+.s-header__social svg:hover {
+    padding-bottom: 0.3rem;
 }
 
 .s-header__social svg path {
     fill : white;
 }
+
 
 /* --------------------------------------------------------------------
  * ## mobile menu toggle
@@ -3319,6 +3326,14 @@ img.u-pull-left {
     margin-bottom : var(--vspace-2);
 }
 
+.p-about {
+    text-align: justify; 
+    text-align-last: center;
+    margin: 0 auto;
+    width: 30em;
+    color: var(--color-gray-3);
+}
+
 /* --------------------------------------------------------------------
  * ## intro stats
  * -------------------------------------------------------------------- */
@@ -3574,27 +3589,33 @@ img.u-pull-left {
 }
 
 .service-icon--product-design {
-    background-image : url(../images/icons/services/icon-product-design.svg);
+    background-image : url(../images/icons/services/ic_product_design.svg);
 }
 
 .service-icon--branding {
-    background-image : url(../images/icons/services/icon-branding.svg);
+    background-image : url(../images/icons/services/ic_branding.svg);
 }
 
-.service-icon--frontend {
-    background-image : url(../images/icons/services/icon-frontend.svg);
+.service-icon--app-development {
+    background-image : url(../images/icons/services/ic_app_development.svg);
 }
 
-.service-icon--research {
-    background-image : url(../images/icons/services/icon-research.svg);
+.service-icon--web-development {
+    background-image : url(../images/icons/services/ic_web_developement.svg);
 }
 
-.service-icon--illustration {
-    background-image : url(../images/icons/services/icon-illustration.svg);
+.service-icon--graphic-design {
+    background-image : url(../images/icons/services/ic_graphic_design.svg);
 }
 
-.service-icon--ecommerce {
-    background-image : url(../images/icons/services/icon-ecommerce.svg);
+.service-icon--playstore-monetization {
+    background-image : url(../images/icons/services/ic_playstore_monetisation.svg);
+}
+
+.p-service{
+    text-align: justify; 
+    text-align-last: left;
+    margin: 0 auto;
 }
 
 /* ------------------------------------------------------------------- 
@@ -4146,7 +4167,12 @@ img.u-pull-left {
 }
 
 .contact-list a {
+    font-size: 2rem;
     color : white;
+}
+
+.contact-list a:hover {
+    color : var(--color-1)
 }
 
 .contact-list li {
@@ -4227,6 +4253,10 @@ img.u-pull-left {
     border          : 2px solid var(--color-1);
     border-radius   : 50%;
     margin-right    : 2.2rem;
+}
+
+.ss-go-top__icon:hover{
+    border          : 3px solid var(--color-white);
 }
 
 .ss-go-top::after {
