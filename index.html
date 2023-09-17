@@ -12,13 +12,15 @@
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
     </script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function(){
-        emailjs.init("T9Vrzv3ng8daX5yxe");
-    })();
-</script>
+    <script src="js/contact.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+        <script type="text/javascript">
+        (function(){
+        emailjs.init("WmuYGgvEhbbjubu5N");
+        })();
+    </script>
 
     <!-- CSS
     ================================================== -->
@@ -588,7 +590,7 @@
         ================================================== -->
         <section id="contact" class="s-contact target-section">
 
-            <div class="row section-header section-header--dark"">
+            <div class="row section-header section-header--dark">
                 <div class="column lg-12">
                     <h3 class="text-pretitle">Get In Touch</h3>
                     <h1 class="text-display-title">
@@ -600,19 +602,19 @@
             <div class="column lg-6 tab-12" style="margin: auto; width: 50%;">
                 <form>
                     <div>
-                        <label for="sampleInput">Your Name</label>
-                        <input class="u-fullwidth" type="text" placeholder="Enter Your Name" id="edt_name" required>
+                        <label>Your Name</label>
+                        <input class="u-fullwidth" type="text" placeholder="Enter Your Name" id="fullName" required>
                     </div>
                     <div>
-                        <label for="sampleInput">Your email</label>
-                        <input class="u-fullwidth" type="email" placeholder="Enter Your Email" id="edt_email" required>
+                        <label>Your email</label>
+                        <input class="u-fullwidth" type="email" placeholder="Enter Your Email" id="email_id" required>
                     </div>
                     <div>
-                        <label for="sampleRecipientInput">I'm Interested in</label>
+                        <label>I'm Interested in</label>
                         <div class="ss-custom-select">
-                            <select class="u-fullwidth" id="projectType" required>
-                                <option value="Web Dev">Web Development</option>
-                                <option value="App Dev">App Development</option>
+                            <select class="u-fullwidth" id="project_type" required>
+                                <option value="Web Development">Web Development</option>
+                                <option value="App Development">App Development</option>
                                 <option value="Branding/Graphic Design">Branding/Graphic Design</option>
                                 <option value="UI/UX Design">UI/UX Design</option>
                                 <option value="S.E.O">S.E.O</option>
@@ -620,8 +622,8 @@
                         </div>
                     </div>
                     
-                    <label for="exampleMessage">Message</label>
-                    <textarea class="u-fullwidth" placeholder="Your message" id="edt_message" required></textarea>
+                    <label>Message</label>
+                    <textarea class="u-fullwidth" placeholder="Your message" id="message" required></textarea>
                     <input class="btn--primary u-fullwidth" onclick="sendMail()" type="submit" value="Submit">
                 </form>
 
@@ -730,6 +732,6 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/contact.js"></script>
+   
 </body>
 </html>
